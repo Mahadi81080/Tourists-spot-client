@@ -123,24 +123,36 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="bg-white text-black p-7  rounded-xl">
-            <div>
-              <img
-                src="https://i.postimg.cc/KjxXcXM6/logo-1.jpg"
-                className="w-1/4"
-                alt=""
-              />
-              <p className="py-4 max-w-sm">
-                Travel is a transformative and enriching experience that allows
-                individuals to explore new destinations, cultures, and
-                landscapes.
-              </p>
-              <hr />
-              <div className="flex gap-6 text-[#4b5051] mt-3">
-                <h3>Terms of usa</h3>
-                <h3>Privacy and Cookies Statement</h3>
-                <h3>How the site works</h3>
+          <div className="bg-white text-black p-7  rounded-xl ">
+            <div className="flex justify-between">
+              <div>
+                <img
+                  src="https://i.postimg.cc/KjxXcXM6/logo-1.jpg"
+                  className="w-1/4"
+                  alt=""
+                />
+                <p className="py-4 max-w-sm ">
+                  Zourney is a transformative and enriching experience that
+                  allows individuals to explore new destinations, cultures, and
+                  landscapes.
+                </p>
               </div>
+              <div className="space-y-3">
+                <h3 className="text-2xl font-semibold">
+                  Subscribe Our Newsletter
+                </h3>
+                <input
+                  type="email"
+                  placeholder="Enter Your Email"
+                  className="bg-gray-200 py-4 px-8 rounded-lg"
+                />
+              </div>
+            </div>
+            <hr />
+            <div className="flex gap-6 text-[#4b5051] mt-3">
+              <h3>Terms of usa</h3>
+              <h3>Privacy and Cookies Statement</h3>
+              <h3>How the site works</h3>
             </div>
           </div>
         </div>

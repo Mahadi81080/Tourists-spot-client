@@ -16,9 +16,15 @@ const Navbar = () => {
         All Tourists Spot
         </Link>
       </li>
+     
       <li>
         <Link className="font-semibold text-lg" to="/addSpot">
         Add Tourists Spot
+        </Link>
+      </li>
+      <li>
+        <Link className="font-semibold text-lg" to="/">
+        My List
         </Link>
       </li>
       {user && (

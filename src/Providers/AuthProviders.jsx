@@ -1,11 +1,13 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import auth from "../Firebase/Firebase";
 import { createContext, useEffect, useState } from "react";
-import { FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider } from "firebase/auth/cordova";
+
+
+ "firebase/auth/cordova";
 
 export const AuthContext = createContext(null);
 // Social auth provider
-const googleProvider = new GoogleAuthProvider();
+const googleProvider =new GoogleAuthProvider()
 const githubProvider = new GithubAuthProvider();
 const facebookProvider = new FacebookAuthProvider();
 
@@ -17,14 +19,6 @@ const AuthProviders = ({children}) => {
       setLoading(true);
       return createUserWithEmailAndPassword(auth, email, password);
     };
-    // Update user profile
-    // const updateUserProfile = (name, image) => {
-    //   return updateProfile(auth.currentUser, {
-    //     displayName: name,
-    //     photoURL: image,
-    //   });
-    // };
-    // Observer
     useEffect(() => {
       const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
         console.log("User in the auth state change", currentUser);
@@ -70,7 +64,6 @@ const AuthProviders = ({children}) => {
       googleLogin,
       githubLogin,
       facebookLogin,
-    //   updateUserProfile,
     };
     return (
       <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

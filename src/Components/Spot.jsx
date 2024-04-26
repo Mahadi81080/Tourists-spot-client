@@ -1,5 +1,4 @@
-import { FaRegEye } from "react-icons/fa";
-import { MdDelete, MdEdit } from "react-icons/md";
+ 
 import { Link } from "react-router-dom";
 
 const Spot = ({ spot }) => {
@@ -16,7 +15,7 @@ const Spot = ({ spot }) => {
     <div>
       <div className="card w-96 bg-base-100 shadow-xl">
         <figure>
-          <img src={Photo} alt="Shoes" />
+          <img src={Photo} alt="Shoes" className="h-72"/>
         </figure>
         <div className="card-body">
           <div className="mt-6 space-y-3">

@@ -7,39 +7,45 @@ import AddSpot from "../Pages/AddSpot/AddSpot";
 import AllSpot from "../Pages/AllSpot/AllSpot";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import PrivateRoutes from "./PrivateRoutes";
+import TouristSpot from "../Components/TouristSpot";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    children:[
+    children: [
       {
-        path:'/',
-        element:<Home></Home>
+        path: "/",
+        element: <Home></Home>,
+        loader:() => fetch("http://localhost:5000/addSpot")
       },
       {
-        path:'/allSpot',
-        element:<AllSpot></AllSpot>,
-        loader:()=>fetch('http://localhost:5000/addSpot')
+        path: "/allSpot",
+        element: <AllSpot></AllSpot>,
+        loader: () => fetch("http://localhost:5000/addSpot"),
       },
       {
-        path:'/login',
-        element:<Login></Login>
+        path: "/login",
+        element: <Login></Login>,
       },
       {
-        path:'/register',
-        element:<Register></Register>
+        path: "/register",
+        element: <Register></Register>,
       },
       {
-        path:'/addSpot',
-        element:<AddSpot></AddSpot>
+        path: "/addSpot",
+        element: <AddSpot></AddSpot>,
       },
       {
-        path:'/addSpot/:_id',
-        element:<PrivateRoutes><ViewDetails></ViewDetails></PrivateRoutes>,
-        loader:()=>fetch('http://localhost:5000/addSpot')
-      }
-    ]
+        path: "/addSpot/:_id",
+        element: (
+          <PrivateRoutes>
+            <ViewDetails></ViewDetails>
+          </PrivateRoutes>
+        ),
+        loader: () => fetch("http://localhost:5000/addSpot"),
+      },
+    ],
   },
 ]);
 export default router;

@@ -7,7 +7,8 @@ import AddSpot from "../Pages/AddSpot/AddSpot";
 import AllSpot from "../Pages/AllSpot/AllSpot";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import PrivateRoutes from "./PrivateRoutes";
-import TouristSpot from "../Components/TouristSpot";
+ 
+import MyList from "../Pages/MyList/MyList";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
       {
         path: "/allSpot",
         element: <AllSpot></AllSpot>,
+        loader: () => fetch("http://localhost:5000/addSpot"),
+      },
+      {
+        path:"myList",
+        element:<MyList></MyList>,
         loader: () => fetch("http://localhost:5000/addSpot"),
       },
       {

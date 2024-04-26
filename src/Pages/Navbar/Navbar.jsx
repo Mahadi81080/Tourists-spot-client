@@ -12,8 +12,13 @@ const Navbar = () => {
         </Link>
       </li>
       <li>
-        <Link className="font-semibold text-lg" to="/">
+        <Link className="font-semibold text-lg" to="/allSpot">
         All Tourists Spot
+        </Link>
+      </li>
+      <li>
+        <Link className="font-semibold text-lg" to="/addSpot">
+        Add Tourists Spot
         </Link>
       </li>
       {user && (

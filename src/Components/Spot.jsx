@@ -44,12 +44,13 @@ const Spot = ({ spot }) => {
               Seasonality :{" "}
               <span className="text-base font-normal">{Seasonality}</span>
             </h3>
-            <button
+            <Link
+            to={`/addSpot/${_id}`}
               type="button"
               className="inline-block w-full px-5 py-3 font-semibold tracking-wider text-center rounded bg-[#ed5b31] text-white "
             >
               View details
-            </button>
+            </Link>
           </div>
         </div>
       </div>

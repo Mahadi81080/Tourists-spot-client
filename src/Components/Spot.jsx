@@ -13,7 +13,7 @@ const Spot = ({ spot }) => {
   } = spot;
   return (
     <div>
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card  bg-base-100 shadow-xl">
         <figure>
           <img src={Photo} alt="Shoes" className="h-72"/>
         </figure>

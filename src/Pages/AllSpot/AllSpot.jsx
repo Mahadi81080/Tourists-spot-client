@@ -4,8 +4,8 @@ import Spot from "../../Components/Spot";
 const AllSpot = () => {
   const touristsSpots = useLoaderData();
   return (
-    <div className="mx-10">
-      <div className="max-w-2xl mx-auto mb-16 text-center">
+    <div className="mx-10 my-5">
+      <div className="max-w-2xl mx-auto my-10 text-center">
         <span className="font-bold tracking-wider uppercase text-[#ed5b31]">
           The Best Spots
         </span>

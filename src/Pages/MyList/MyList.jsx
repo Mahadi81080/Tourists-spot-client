@@ -9,7 +9,6 @@ import { useState } from "react";
 const MyList = () => {
   const { user } = useContext(AuthContext);
 
-  
   const myLists = useLoaderData();
   const currentUserEmail = user.email;
   const currentList = myLists.filter(
@@ -37,7 +36,7 @@ const MyList = () => {
             if (data.deletedCount > 0) {
               Swal.fire({
                 title: "Deleted!",
-                text: "Your file has been deleted.",
+                text: "Your post has been deleted.",
                 icon: "success",
               });
               const remaining = lists.filter((list) => list._id !== _id);
@@ -49,30 +48,62 @@ const MyList = () => {
   };
   return (
     <div>
-      <div className="my-5">
-        <h2 className="text-center my-4 text-3xl text-[#ed5b31]">Your Added Tourists Spot Data</h2>
-        <div className="overflow-x-auto bg-orange-50 mx-10">
+      <div className="my-5 mx-10 min-h-screen">
+        <h2 className="text-center my-8 text-3xl text-black font-semibold ">
+          Your Added Tourists Spot Data
+        </h2>
+        <div className="overflow-x-auto">
           <table className="table">
             {/* head */}
             <thead>
-              <tr className="text-lg font-semibold text-black">
-                <th></th>
-                <td>Tourists_spot_name</td>
-                <td>County_name</td>
-                <td>Average_cost</td>
-                <td>Update</td>
-                <td>Delete</td>
+              <tr className="text-base font-semibold text-black">
+                <th>
+                  <label>
+                    <input type="checkbox" className="checkbox" />
+                  </label>
+                </th>
+                <th>Tourists Spot</th>
+                <th>Average_cos</th>
+                <th> Total_Visitors_Per_Year</th>
+                <th>Update</th>
+                <th>Delete</th>
               </tr>
             </thead>
             <tbody>
               {/* row 1 */}
-
               {lists.map((list) => (
                 <tr key={list._id} className="hover">
-                  <th>1</th>
-                  <td>{list.Tourists_spot_name}</td>
-                  <td>{list.County_name}</td>
+                  <th>
+                    <label>
+                      <input type="checkbox" className="checkbox" />
+                    </label>
+                  </th>
+                  <td>
+                    <div className="flex items-center gap-3">
+                      <div className="avatar">
+                        <div className="mask mask-squircle w-12 h-12">
+                          <img
+                            src={list.Photo}
+                            alt="Avatar Tailwind CSS Component"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <div className="font-bold">
+                          {list.Tourists_spot_name}
+                        </div>
+                        <div className="text-sm opacity-50">
+                          {list.County_name}
+                        </div>
+                      </div>
+                    </div>
+                  </td>
                   <td>{list.Average_cost}</td>
+                  <td>
+                    <span className="badge badge-ghost badge-sm">
+                      {list.totaVisitorsPerYear} viewer
+                    </span>
+                  </td>
                   <td>
                     <Link to={`/updatePost/${list._id}`}>
                       <button className="btn bg-black text-white">
@@ -91,14 +122,24 @@ const MyList = () => {
                 </tr>
               ))}
             </tbody>
+            {/* foot */}
+            <tfoot>
+              <tr >
+                <th>
+                  <label>
+                    <input type="checkbox" className="checkbox" />
+                  </label>
+                </th>
+                <th>Tourists Spot</th>
+                <th>Average_cos</th>
+                <th> Total_Visitors_Per_Year</th>
+                <th>Update</th>
+                <th>Delete</th>
+              </tr>
+            </tfoot>
           </table>
         </div>
       </div>
-      {/* <div className="grid grid-cols-3 gap-5">
-        {currentList.map((list) => (
-          <List key={list._id} list={list}></List>
-        ))}
-      </div> */}
     </div>
   );
 };

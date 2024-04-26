@@ -32,10 +32,10 @@ const AddSpot = () => {
   };
 
   return (
-    <div>
-      <section className="p-6 bg-[#f4f3f0]">
-        <h2 className="text-2xl font-semibold text-center">
-          Add Tourists Spot
+    <div className="mx-10 my-5">
+      <section className="p-6 bg-[#f4f3f0] rounded-xl">
+        <h2 className="text-3xl font-semibold text-center ">
+          _____ Add Tourists Spot ______
         </h2>
         <form
           onSubmit={handleSubmit(onSubmit)}

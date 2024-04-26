@@ -2,10 +2,9 @@ import { FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider, createUse
 import auth from "../Firebase/Firebase";
 import { createContext, useEffect, useState } from "react";
 
+ 
 
- "firebase/auth/cordova";
-
-export const AuthContext = createContext(null);
+export const AuthContext = createContext({});
 // Social auth provider
 const googleProvider =new GoogleAuthProvider()
 const githubProvider = new GithubAuthProvider();
@@ -26,7 +25,7 @@ const AuthProviders = ({children}) => {
         setLoading(false);
       });
       return () => {
-        unSubscribe();
+       return unSubscribe();
       };
     }, []);
     // SingIn account

@@ -143,7 +143,7 @@ const Footer = () => {
                 </h3>
                 <input
                   type="email"
-                  placeholder="Enter Your Email"
+                  defaultValue="Enter Your Email"
                   className="bg-gray-200 py-4 px-8 rounded-lg"
                 />
               </div>

@@ -7,8 +7,9 @@ import AddSpot from "../Pages/AddSpot/AddSpot";
 import AllSpot from "../Pages/AllSpot/AllSpot";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import PrivateRoutes from "./PrivateRoutes";
- 
+
 import MyList from "../Pages/MyList/MyList";
+import UpdatePost from "../Components/UpdatePost";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader:() => fetch("http://localhost:5000/addSpot")
+        loader: () => fetch("http://localhost:5000/addSpot"),
       },
       {
         path: "/allSpot",
@@ -26,8 +27,12 @@ const router = createBrowserRouter([
         loader: () => fetch("http://localhost:5000/addSpot"),
       },
       {
-        path:"myList",
-        element:<MyList></MyList>,
+        path: "myList",
+        element: (
+          <PrivateRoutes>
+            <MyList></MyList>
+          </PrivateRoutes>
+        ),
         loader: () => fetch("http://localhost:5000/addSpot"),
       },
       {
@@ -50,6 +55,16 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: () => fetch("http://localhost:5000/addSpot"),
+      },
+      {
+        path: "updatePost/:id",
+        element: (
+          <PrivateRoutes>
+            <UpdatePost></UpdatePost>
+          </PrivateRoutes>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/addSpot/${params.id}`),
       },
     ],
   },

@@ -8,6 +8,8 @@ import { useState } from "react";
 
 const MyList = () => {
   const { user } = useContext(AuthContext);
+
+  
   const myLists = useLoaderData();
   const currentUserEmail = user.email;
   const currentList = myLists.filter(
@@ -72,7 +74,7 @@ const MyList = () => {
                   <td>{list.County_name}</td>
                   <td>{list.Average_cost}</td>
                   <td>
-                    <Link to={`updateCoffee/${list._id}`}>
+                    <Link to={`/updatePost/${list._id}`}>
                       <button className="btn bg-black text-white">
                         <MdEdit />
                       </button>

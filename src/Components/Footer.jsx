@@ -7,7 +7,7 @@ const Footer = () => {
         className="divide-y bg-[#071516] text-white py-8 px-12"
       >
         <div className=" py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0 ">
-          <div className="grid lg:grid-cols-4 text-sm gap-x-3 gap-y-8 sm:grid-cols-3 pb-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 text-sm gap-x-3 gap-y-8 sm:grid-cols-3 pb-10">
             <div className="space-y-3">
               <h3 className=" uppercase text-xl">Company</h3>
               <ul className="space-y-1">
@@ -123,12 +123,12 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="bg-white text-black p-7  rounded-xl ">
-            <div className="flex justify-between">
+          <div className="bg-white text-black p-7 rounded-xl ">
+            <div className="flex flex-col md:flex-row lg:flex-row space-y-2 lg:space-y-0 justify-between">
               <div>
                 <img
                   src="https://i.postimg.cc/KjxXcXM6/logo-1.jpg"
-                  className="w-1/4"
+                  className="md:w-1/4 lg:w-1/4"
                   alt=""
                 />
                 <p className="py-4 max-w-sm ">
@@ -148,8 +148,8 @@ const Footer = () => {
                 />
               </div>
             </div>
-            <hr />
-            <div className="flex gap-6 text-[#4b5051] mt-3">
+            <hr  className=" mt-0 md:mt-3"/>
+            <div className="flex flex-col md:flex-row lg:flex-row md:gap-6 lg:gap-6 text-[#4b5051] mt-3">
               <h3>Terms of usa</h3>
               <h3>Privacy and Cookies Statement</h3>
               <h3>How the site works</h3>

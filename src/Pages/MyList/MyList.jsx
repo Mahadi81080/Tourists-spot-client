@@ -49,7 +49,7 @@ const MyList = () => {
   return (
     <div>
       <div className="my-5 mx-10 min-h-screen">
-        <h2 className="text-center my-8 text-3xl text-black font-semibold ">
+        <h2 className="text-center my-8 md:texl-2xl lg:text-3xl text-black font-semibold ">
           Your Added Tourists Spot Data
         </h2>
         <div className="overflow-x-auto">

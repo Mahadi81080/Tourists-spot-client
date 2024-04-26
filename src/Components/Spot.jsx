@@ -15,7 +15,7 @@ const Spot = ({ spot }) => {
     <div>
       <div className="card  bg-base-100 shadow-xl">
         <figure>
-          <img src={Photo} alt="Shoes" className="h-72"/>
+          <img src={Photo} alt="Shoes" className="lg:h-72"/>
         </figure>
         <div className="card-body">
           <div className="mt-6 space-y-3">

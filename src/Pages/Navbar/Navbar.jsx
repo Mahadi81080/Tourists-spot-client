@@ -68,7 +68,7 @@ const Navbar = () => {
           </div>
           <img
             src="https://i.postimg.cc/KjxXcXM6/logo-1.jpg"
-            className="w-36 h-8"
+            className=" w-24 h-4 md:w-36 md:h-7 lg:w-36 lg:h-8"
             alt=""
           />
         </div>
@@ -141,11 +141,11 @@ const Navbar = () => {
               </button>
             </div>
           ) : (
-            <div className="space-x-2">
-              <Link to="/login" className="btn bg-[#ed5b31] text-white px-7">
+            <div className=" flex md:space-x-2 lg:space-x-2">
+              <Link to="/login" className="btn bg-[#ed5b31] text-white lg:px-7">
                 Sing In
               </Link>
-              <Link to="/register" className="btn bg-[#ed5b31] text-white px-7">
+              <Link to="/register" className="btn bg-[#ed5b31] text-white lg:px-7">
                 Register
               </Link>
             </div>

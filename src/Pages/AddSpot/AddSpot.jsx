@@ -34,7 +34,7 @@ const AddSpot = () => {
   return (
     <div className="mx-10 my-5">
       <section className="p-6 bg-[#f4f3f0] rounded-xl">
-        <h2 className="text-3xl font-semibold text-center ">
+        <h2 className="md:text-2xl lg:text-3xl font-semibold text-center ">
           _____ Add Tourists Spot ______
         </h2>
         <form

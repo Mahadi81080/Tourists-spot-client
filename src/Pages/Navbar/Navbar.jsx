@@ -144,7 +144,7 @@ const Navbar = () => {
                 </div>
               </div>
               <ul
-                className={`mt-14 mr-24 z-[2] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52 ${
+                className={`mt-10 mr-24 z-20 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52 ${
                   showMenu ? "block" : "hidden"
                 }`}
               >

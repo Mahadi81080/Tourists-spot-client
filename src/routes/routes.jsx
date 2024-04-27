@@ -17,7 +17,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement:<ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -26,7 +26,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/allSpot",
-        element: <PrivateRoutes><AllSpot></AllSpot></PrivateRoutes>,
+        element: (
+          <PrivateRoutes>
+            <AllSpot></AllSpot>
+          </PrivateRoutes>
+        ),
         loader: () => fetch("http://localhost:5000/addSpot"),
       },
       {
@@ -48,7 +52,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/addSpot",
-        element: <PrivateRoutes><AddSpot></AddSpot></PrivateRoutes>,
+        element: (
+          <PrivateRoutes>
+            <AddSpot></AddSpot>
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/addSpot/:_id",
@@ -69,11 +77,6 @@ const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:5000/addSpot/${params.id}`),
       },
-      {
-        path:"/countries",
-        element:<Countries></Countries>,
-        loader:()=>fetch('http://localhost:5000/countries')
-      }
     ],
   },
 ]);

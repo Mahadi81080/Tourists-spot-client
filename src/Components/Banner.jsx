@@ -6,7 +6,7 @@ import { Zoom } from "react-awesome-reveal";
 
 const Banner = () => {
   return (
-    <div className="space-y-8 mt-5 mb-5">
+    <div className="space-y-8 mt-5 mb-5 z-10">
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         <SwiperSlide>
           <div

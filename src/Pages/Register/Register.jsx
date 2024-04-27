@@ -61,7 +61,7 @@ const Register = () => {
                   type="text"
                   name="name"
                   id="name"
-                  defaultValue="Your name"
+                  placeholder="Your name"
                   className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800"
                   {...register("FullName", { required: true })}
                 />
@@ -77,7 +77,7 @@ const Register = () => {
                   type="text"
                   name="photo"
                   id="photo url"
-                  defaultValue="Photo URL"
+                  placeholder="Photo URL"
                   className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800"
                   {...register("image")}
                 />
@@ -93,7 +93,7 @@ const Register = () => {
                   type="text"
                   name="email"
                   id="text"
-                  defaultValue="leroy@jenkins.com"
+                  placeholder="leroy@jenkins.com"
                   className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800"
                   {...register("email", { required: true })}
                 />
@@ -112,7 +112,7 @@ const Register = () => {
                     type={showPassword ? "text" : "password"}
                     name="password"
                     id="password"
-                    defaultValue="*****"
+                    placeholder="*****"
                     className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800"
                     {...register("password", { required: true })}
                   />

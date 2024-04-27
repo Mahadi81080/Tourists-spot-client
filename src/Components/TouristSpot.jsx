@@ -12,7 +12,7 @@ const TouristSpot = ({ spot }) => {
     Seasonality,
   } = spot;
   return (
-    <div className="card w-96 bg-base-100 shadow-xl">
+    <div className="card w-96 bg-base-100 shadow-xl"  data-aos="zoom-in" data-aos-duration="1000">
       <figure>
         <img src={Photo} alt="Shoes" className="h-72" />
       </figure>

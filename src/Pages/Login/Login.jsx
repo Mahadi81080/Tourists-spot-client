@@ -48,7 +48,7 @@ const Login = () => {
                   type="email"
                   name="email"
                   id="email"
-                  defaultValue="leroy@jenkins.com"
+                  placeholder="Enter Your Email"
                   className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800"
                   {...register("email", { required: true })}
                 />
@@ -67,7 +67,7 @@ const Login = () => {
                     type={showPassword ? "text" : "password"}
                     name="password"
                     id="password"
-                    defaultValue="*****"
+                    placeholder="*****"
                     className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800"
                     {...register("password", { required: true })}
                   />

@@ -5,6 +5,7 @@ import { AuthContext } from "../../Providers/AuthProviders";
 import { MdDelete, MdEdit } from "react-icons/md";
 import Swal from "sweetalert2";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const MyList = () => {
   const { user } = useContext(AuthContext);
@@ -48,6 +49,9 @@ const MyList = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>My_List</title>
+      </Helmet>
       <div className="my-5 mx-10 min-h-screen">
         <h2 className="text-center my-8 md:texl-2xl lg:text-3xl text-black font-semibold ">
           Your Added Tourists Spot Data
@@ -72,7 +76,8 @@ const MyList = () => {
             <tbody>
               {/* row 1 */}
               {lists.map((list) => (
-                <tr key={list._id} className="hover">
+                <tr key={list._id} className="hover" data-aos="fade-right"
+                data-aos-duration="2000">
                   <th>
                     <label>
                       <input type="checkbox" className="checkbox" />

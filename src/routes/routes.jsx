@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/allSpot",
-        element: <AllSpot></AllSpot>,
+        element: <PrivateRoutes><AllSpot></AllSpot></PrivateRoutes>,
         loader: () => fetch("http://localhost:5000/addSpot"),
       },
       {
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/addSpot",
-        element: <AddSpot></AddSpot>,
+        element: <PrivateRoutes><AddSpot></AddSpot></PrivateRoutes>,
       },
       {
         path: "/addSpot/:_id",

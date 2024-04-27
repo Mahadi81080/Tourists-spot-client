@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
 
 const Navbar = () => {
@@ -7,26 +7,48 @@ const Navbar = () => {
   const navLink = (
     <>
       <li>
-        <Link className="font-semibold text-lg" to="/">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive
+              ? "text-orange-500 font-bold px-3 py-2"
+              : "font-bold px-3 py-2 "
+          }
+        >
           Home
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link className="font-semibold text-lg" to="/allSpot">
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "text-orange-500 font-bold px-3 py-2 "
+              : "font-bold px-3 py-2 "
+          }
+          to="/allSpot"
+        >
           All Tourists Spot
-        </Link>
+        </NavLink>
       </li>
       {user && (
         <>
           <li>
-            <Link className="font-semibold text-lg" to="/addSpot">
+            <NavLink className={({ isActive }) =>
+                isActive
+                  ? "text-orange-500 font-bold px-3 py-2"
+                  : "font-bold px-3 py-2"
+              } to="/addSpot">
               Add Tourists Spot
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className="font-semibold text-lg" to="/myList">
+            <NavLink className={({ isActive }) =>
+                isActive
+                  ? "text-orange-500 font-bold px-3 py-2  "
+                  : "font-bold px-3 py-2 "
+              } to="/myList">
               My List
-            </Link>
+            </NavLink>
           </li>
         </>
       )}
@@ -66,11 +88,14 @@ const Navbar = () => {
               {navLink}
             </ul>
           </div>
-          <img
-            src="https://i.postimg.cc/KjxXcXM6/logo-1.jpg"
-            className=" w-24 h-4 md:w-36 md:h-7 lg:w-36 lg:h-8"
-            alt=""
-          />
+          <div className="flex gap-3 items-center justify-center">
+            <img
+              src="https://i.postimg.cc/5t9995P4/logo-1-removebg-preview.png"
+              className=" w-5 h-5 md:w-9 md:h-6 lg:w-10 lg:h-8"
+              alt=""
+            />
+            <h2 className="text-2xl font-bold -mt-2 text-[#ed5b31]">Zourney</h2>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLink}</ul>
@@ -78,11 +103,7 @@ const Navbar = () => {
         <div className="navbar-end">
           <label className="swap swap-rotate">
             {/* this hidden checkbox controls the state */}
-            <input
-              type="checkbox"
-              className="theme-controller"
-              value="synthwave"
-            />
+            <input type="checkbox" className="theme-controller" value="dark" />
 
             {/* sun icon */}
             <svg
@@ -145,7 +166,10 @@ const Navbar = () => {
               <Link to="/login" className="btn bg-[#ed5b31] text-white lg:px-7">
                 Sing In
               </Link>
-              <Link to="/register" className="btn bg-[#ed5b31] text-white lg:px-7">
+              <Link
+                to="/register"
+                className="btn bg-[#ed5b31] text-white lg:px-7"
+              >
                 Register
               </Link>
             </div>

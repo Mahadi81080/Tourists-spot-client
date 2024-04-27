@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 
@@ -33,13 +34,22 @@ const AddSpot = () => {
 
   return (
     <div className="mx-10 my-5">
+      <Helmet>
+        <title>Add_Tourists_Spot</title>
+      </Helmet>
       <section className="p-6 bg-[#f4f3f0] rounded-xl">
-        <h2 className="md:text-2xl lg:text-3xl font-semibold text-center ">
+        <h2
+          className="md:text-2xl lg:text-3xl font-semibold text-center "
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
           _____ Add Tourists Spot ______
         </h2>
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="container flex flex-col mx-auto space-y-12"
+          data-aos="zoom-in-up"
+          data-aos-duration="2000"
         >
           <fieldset className=" p-6 rounded-md shadow-sm">
             <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">

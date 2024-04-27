@@ -1,16 +1,26 @@
+import { Typewriter } from "react-simple-typewriter";
+
 const CustomerReview = () => {
   return (
     <section className="my-8 bg-gray-800 dark:bg-gray-100 text-gray-100 dark:text-gray-800">
       <div className="container flex flex-col items-center mx-auto mb-12 md:p-10 md:px-12">
         <h1 className="p-4 text-4xl font-semibold leading-none text-center">
-          What our customers are saying about us
+          <Typewriter
+            words={["What our customers are saying about us"]}
+            loop={5}
+            cursor
+            cursorStyle=""
+            typeSpeed={100}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          ></Typewriter>
         </h1>
       </div>
       <div className="container flex flex-col items-center justify-center mx-auto lg:flex-row lg:flex-wrap lg:justify-evenly lg:px-10">
         <div
           className="flex flex-col max-w-sm mx-4 my-6 shadow-lg"
           data-aos="fade-right"
-          data-aos-offset="1000"
+          data-aos-offset="300"
           data-aos-easing="ease-in-sine"
         >
           <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 bg-gray-900 dark:bg-gray-50">
@@ -55,7 +65,7 @@ const CustomerReview = () => {
         <div
           className="flex flex-col max-w-sm mx-4 my-6 shadow-lg"
           data-aos="fade-left"
-          data-aos-duration="800"
+          data-aos-duration="500"
         >
           <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 bg-gray-900 dark:bg-gray-50">
             <p className="relative px-6 py-1 text-lg italic text-center text-gray-100 dark:text-gray-800">
@@ -98,7 +108,7 @@ const CustomerReview = () => {
         <div
           className="flex flex-col max-w-sm mx-4 my-6 shadow-lg"
           data-aos="fade-right"
-          data-aos-offset="500"
+          data-aos-offset="300"
           data-aos-easing="ease-in-sine"
         >
           <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 bg-gray-900 dark:bg-gray-50">
@@ -142,7 +152,7 @@ const CustomerReview = () => {
         <div
           className="flex flex-col max-w-sm mx-4 my-6 shadow-lg"
           data-aos="fade-left"
-          data-aos-duration="300"
+          data-aos-duration="500"
         >
           <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 bg-gray-900 dark:bg-gray-50">
             <p className="relative px-6 py-1 text-lg italic text-center text-gray-100 dark:text-gray-800">

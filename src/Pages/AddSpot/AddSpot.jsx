@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
+import { Typewriter } from "react-simple-typewriter";
 import Swal from "sweetalert2";
 
 const AddSpot = () => {
@@ -43,7 +44,15 @@ const AddSpot = () => {
           data-aos="fade-right"
           data-aos-duration="1000"
         >
-          _____ Add Tourists Spot ______
+          <Typewriter
+            words={["Add Tourists Spot"]}
+            cursor
+            cursorStyle=""
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={800}
+          >
+          </Typewriter>
         </h2>
         <form
           onSubmit={handleSubmit(onSubmit)}

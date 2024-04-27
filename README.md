@@ -29,7 +29,5 @@ To get started with The Zourney, simply visit our live site [here](https://book-
 - AOS Package
 - React Hook form
 - Swiper slider
-
-
-
-
+- React Awesome reveal
+- React Simple Typewriter

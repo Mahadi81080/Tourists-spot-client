@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 const TouristSpot = ({ spot }) => {
-    console.log(spot);
   const {
     _id,
     Tourists_spot_name,
@@ -12,7 +11,11 @@ const TouristSpot = ({ spot }) => {
     Seasonality,
   } = spot;
   return (
-    <div className="card w-96 bg-base-100 shadow-xl"  data-aos="zoom-in" data-aos-duration="1000">
+    <div
+      className="card w-96 bg-base-100 shadow-xl"
+      data-aos="zoom-in"
+      data-aos-duration="1000"
+    >
       <figure>
         <img src={Photo} alt="Shoes" className="h-72" />
       </figure>

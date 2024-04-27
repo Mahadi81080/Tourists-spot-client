@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import { Zoom } from "react-awesome-reveal";
 
 const Banner = () => {
   return (
@@ -34,15 +35,18 @@ const Banner = () => {
                   data-aos-duration="1500"
                   className="lg:text-4xl font-extrabold font-Gramond text-black"
                 >
-                 Mesmerizing Views of Nilgiri,<br /> Bandarban
+                  Mesmerizing Views of Nilgiri,
+                  <br /> Bandarban
                 </h2>
-                <button
-                  data-aos="zoom-in"
-                  data-aos-duration="1700"
-                  className="btn bg-[#ed5b31] text-white lg:px-7 "
-                >
-                  Tourists Spot
-                </button>
+                <Zoom>
+                  <button
+                    data-aos="zoom-in"
+                    data-aos-duration="1700"
+                    className="btn bg-[#ed5b31] text-white lg:px-7 "
+                  >
+                    Tourists Spot
+                  </button>
+                </Zoom>
               </div>
             </div>
           </div>
@@ -65,7 +69,7 @@ const Banner = () => {
                 >
                   _______
                   <span className=" text-white font-medium">
-                  Vietnam Tourists Spot,Ha Long Bay
+                    Vietnam Tourists Spot,Ha Long Bay
                   </span>
                   _______
                 </h5>
@@ -74,15 +78,18 @@ const Banner = () => {
                   data-aos-duration="1500"
                   className="lg:text-4xl font-extrabold font-Gramond text-white"
                 >
-                 Vietnam — Sellers in Ha Long Bay,<br /> Vietnam
+                  Vietnam — Sellers in Ha Long Bay,
+                  <br /> Vietnam
                 </h2>
-                <button
-                  data-aos="fade-up"
-                  data-aos-duration="1700"
-                  className="btn bg-[#ed5b31] text-white lg:px-7 "
-                >
-                  Tourists Spot
-                </button>
+                <Zoom>
+                  <button
+                    data-aos="zoom-in"
+                    data-aos-duration="1700"
+                    className="btn bg-[#ed5b31] text-white lg:px-7 "
+                  >
+                    Tourists Spot
+                  </button>
+                </Zoom>
               </div>
             </div>
           </div>
@@ -101,9 +108,7 @@ const Banner = () => {
                   className="text-[#ed5b31] font-extrabold  sm:text-xs"
                 >
                   _______
-                  <span className="text-white">
-                  A Walk in the Park
-                  </span>
+                  <span className="text-white">A Walk in the Park</span>
                   _______
                 </h5>
                 <h2
@@ -111,15 +116,17 @@ const Banner = () => {
                   data-aos-duration="1500"
                   className="lg:text-4xl font-bold font-Gramond text-white"
                 >
-                 the gates of Penang’s Taman Negara <br /> (National Park)
+                  the gates of Penang’s Taman Negara <br /> (National Park)
                 </h2>
-                <button
-                  data-aos="fade-up"
-                  data-aos-duration="1700"
-                  className="btn bg-[#ed5b31] text-white lg:px-7 "
-                >
-                 Tourists Spot
-                </button>
+                <Zoom>
+                  <button
+                    data-aos="zoom-in"
+                    data-aos-duration="1700"
+                    className="btn bg-[#ed5b31] text-white lg:px-7 "
+                  >
+                    Tourists Spot
+                  </button>
+                </Zoom>
               </div>
             </div>
           </div>

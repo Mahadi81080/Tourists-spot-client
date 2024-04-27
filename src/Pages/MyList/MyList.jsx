@@ -77,7 +77,7 @@ const MyList = () => {
               {/* row 1 */}
               {lists.map((list) => (
                 <tr key={list._id} className="hover" data-aos="fade-right"
-                data-aos-duration="2000">
+                data-aos-duration="1500">
                   <th>
                     <label>
                       <input type="checkbox" className="checkbox" />

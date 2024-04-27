@@ -2,18 +2,27 @@ import { useLoaderData } from "react-router-dom";
 import Banner from "../../Components/Banner";
 import TouristSpot from "../../Components/TouristSpot";
 import CustomerReview from "../../Components/CustomerReview";
-
+import { Typewriter } from "react-simple-typewriter";
+import Countries from "../../Components/Countries";
+ 
 const Home = () => {
   const specificSpots = useLoaderData();
   const sixSpots = specificSpots.slice(0, 6);
-  console.log(sixSpots);
   return (
     <div className="px-5 lg:px-10">
       <Banner></Banner>
       <div>
         <div className="max-w-xl mx-auto text-center space-y-3 my-6">
           <h2 className=" text-4xl font-semibold text-[#ed5b31]">
-            Tourists Spot
+            <Typewriter
+              words={["Tourists Spot"]}
+              loop={5}
+              cursor
+              cursorStyle=""
+              typeSpeed={100}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            ></Typewriter>
           </h2>
           <p className="font-medium">
             Tourist spots are popular destinations that attract visitors from
@@ -33,3 +42,7 @@ const Home = () => {
 };
 
 export default Home;
+
+
+
+

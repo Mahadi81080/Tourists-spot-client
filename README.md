@@ -8,7 +8,7 @@ A journey typically refers to the process of traveling from one place to another
 
 ## Documentation
 
-To get started with The Zourney, simply visit our live site [here](https://book-vibe-80.netlify.app/sing) and enjoying all the features our website.
+To get started with The Zourney, simply visit our live site [here](https://tourists-spot.web.app/) and enjoying all the features our website.
 
 ### Features of Zourney Site
 

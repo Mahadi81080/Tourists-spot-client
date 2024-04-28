@@ -11,8 +11,6 @@ import PrivateRoutes from "./PrivateRoutes";
 import MyList from "../Pages/MyList/MyList";
 import UpdatePost from "../Components/UpdatePost";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
-import Countries from "../Components/Countries";
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,7 +20,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/addSpot"),
+        loader: () => fetch("https://tourists-spot-server.vercel.app/addSpot"),
       },
       {
         path: "/allSpot",
@@ -31,7 +29,7 @@ const router = createBrowserRouter([
             <AllSpot></AllSpot>
           </PrivateRoutes>
         ),
-        loader: () => fetch("http://localhost:5000/addSpot"),
+        loader: () => fetch("https://tourists-spot-server.vercel.app/addSpot"),
       },
       {
         path: "myList",
@@ -40,7 +38,7 @@ const router = createBrowserRouter([
             <MyList></MyList>
           </PrivateRoutes>
         ),
-        loader: () => fetch("http://localhost:5000/addSpot"),
+        loader: () => fetch("https://tourists-spot-server.vercel.app/addSpot"),
       },
       {
         path: "/login",
@@ -65,7 +63,7 @@ const router = createBrowserRouter([
             <ViewDetails></ViewDetails>
           </PrivateRoutes>
         ),
-        loader: () => fetch("http://localhost:5000/addSpot"),
+        loader: () => fetch("https://tourists-spot-server.vercel.app/addSpot"),
       },
       {
         path: "updatePost/:id",
@@ -75,7 +73,7 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/addSpot/${params.id}`),
+          fetch(`https://tourists-spot-server.vercel.app/addSpot/${params.id}`),
       },
     ],
   },

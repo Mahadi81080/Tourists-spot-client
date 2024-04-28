@@ -20,8 +20,7 @@ const CustomerReview = () => {
         <div
           className="flex flex-col max-w-sm mx-4 my-6 shadow-lg"
           data-aos="fade-right"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine"
+          data-aos-duration="3000"
         >
           <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 bg-gray-900 dark:bg-gray-50">
             <p className="relative px-6 py-1 text-lg italic text-center text-gray-100 dark:text-gray-800">
@@ -65,7 +64,7 @@ const CustomerReview = () => {
         <div
           className="flex flex-col max-w-sm mx-4 my-6 shadow-lg"
           data-aos="fade-left"
-          data-aos-duration="500"
+          data-aos-duration="3000"
         >
           <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 bg-gray-900 dark:bg-gray-50">
             <p className="relative px-6 py-1 text-lg italic text-center text-gray-100 dark:text-gray-800">
@@ -108,8 +107,7 @@ const CustomerReview = () => {
         <div
           className="flex flex-col max-w-sm mx-4 my-6 shadow-lg"
           data-aos="fade-right"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine"
+          data-aos-duration="3000"
         >
           <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 bg-gray-900 dark:bg-gray-50">
             <p className="relative px-6 py-1 text-lg italic text-center text-gray-100 dark:text-gray-800">
@@ -152,7 +150,7 @@ const CustomerReview = () => {
         <div
           className="flex flex-col max-w-sm mx-4 my-6 shadow-lg"
           data-aos="fade-left"
-          data-aos-duration="500"
+          data-aos-duration="3000"
         >
           <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 bg-gray-900 dark:bg-gray-50">
             <p className="relative px-6 py-1 text-lg italic text-center text-gray-100 dark:text-gray-800">

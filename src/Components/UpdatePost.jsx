@@ -27,7 +27,7 @@ const UpdatePost = () => {
   const onSubmit = (data) => {
     console.log(data);
     // Update data to the server
-    fetch(`http://localhost:5000/addSpot/${_id}`, {
+    fetch(`https://tourists-spot-server.vercel.app/addSpot/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

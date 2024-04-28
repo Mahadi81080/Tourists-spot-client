@@ -28,7 +28,7 @@ const ViewDetails = () => {
         <div className="bg-orange-50 p-20 mb-8 text-center font-extrabold text-3xl">
           <h2>Tourists Spots Details</h2>
         </div>
-        <section className=" text-gray-100">
+        <section className=" bg-gray-800 dark:bg-gray-100 text-gray-100 dark:text-gray-800">
           <div className="container flex justify-center items-center flex-col mx-auto lg:flex-row">
             <div className="flex flex-col px-3 py-8 space-y-6 rounded-sm sm:p-8 lg:p-12 lg:w-1/3 xl:w-3/5  text-gray-900">
               <img src={Photo} alt="" />
@@ -99,11 +99,13 @@ const ViewDetails = () => {
                   </p>
                   <p>
                     <span className="text-lg font-medium">Travel_time </span>:
-                     {Travel_time}
+                    {Travel_time}
                   </p>
                   <p>
-                    <span className="text-lg font-medium">Total_Visitors_Per_Year  </span> : 
-                     {totaVisitorsPerYear} visitor
+                    <span className="text-lg font-medium">
+                      Total_Visitors_Per_Year{" "}
+                    </span>{" "}
+                    :{totaVisitorsPerYear} visitor
                   </p>
                 </div>
                 <div className="space-y-2 text-center lg:text-left">
@@ -126,7 +128,9 @@ const ViewDetails = () => {
                   </p>
                 </div>
               </div>
-              <button className="btn bg-[#ed5b31] text-white w-full mt-4">Booking Now</button>
+              <button className="btn bg-[#ed5b31] text-white w-full mt-4">
+                Booking Now
+              </button>
             </div>
           </div>
         </section>

@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
+
 const Country = ({ country }) => {
-  // console.log(country);
   const { _id, description, name, photo } = country;
   return (
-    <div>
+    <Link to='/allSpot'>
       <div className="card card-side bg-[#f5f4f1] shadow-xl my-3">
         <figure>
           <img src={photo} alt="Movie" className="h-full" />
@@ -19,7 +20,7 @@ const Country = ({ country }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

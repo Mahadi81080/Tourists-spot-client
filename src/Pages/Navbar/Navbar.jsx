@@ -33,20 +33,26 @@ const Navbar = () => {
       {user && (
         <>
           <li>
-            <NavLink className={({ isActive }) =>
+            <NavLink
+              className={({ isActive }) =>
                 isActive
                   ? "text-orange-500 font-bold px-3 py-2"
                   : "font-bold px-3 py-2"
-              } to="/addSpot">
+              }
+              to="/addSpot"
+            >
               Add Tourists Spot
             </NavLink>
           </li>
           <li>
-            <NavLink className={({ isActive }) =>
+            <NavLink
+              className={({ isActive }) =>
                 isActive
                   ? "text-orange-500 font-bold px-3 py-2  "
                   : "font-bold px-3 py-2 "
-              } to="/myList">
+              }
+              to="/myList"
+            >
               My List
             </NavLink>
           </li>
@@ -83,7 +89,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[2] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-item z-10 menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               {navLink}
             </ul>
@@ -101,7 +107,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navLink}</ul>
         </div>
         <div className="navbar-end">
-          <label className="swap swap-rotate">
+          <label className="swap swap-rotate mr-3">
             {/* this hidden checkbox controls the state */}
             <input type="checkbox" className="theme-controller" value="dark" />
 
@@ -131,7 +137,7 @@ const Navbar = () => {
                 role="button"
                 className="btn btn-ghost btn-circle avatar"
                 onMouseEnter={() => setShowMenu(true)}
-                onMouseLeave={() => setShowMenu(false)}
+                onMouseLeave={() => setShowMenu(true)}
               >
                 <div className="w-12 rounded-full">
                   <img
@@ -144,7 +150,7 @@ const Navbar = () => {
                 </div>
               </div>
               <ul
-                className={`mt-10 mr-24 z-20 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52 ${
+                className={`mt-14 z-20 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52 space-y-2 text-center ${
                   showMenu ? "block" : "hidden"
                 }`}
               >
@@ -153,13 +159,15 @@ const Navbar = () => {
                     {user?.displayName || "User name not found"}
                   </button>
                 </li>
+                <li>
+                  <button
+                    className=" bg-[#ed5b31] text-white py-2 flex justify-center"
+                    onClick={logOut}
+                  >
+                    Logout
+                  </button>
+                </li>
               </ul>
-              <button
-                className="btn bg-[#ed5b31] text-white px-5"
-                onClick={logOut}
-              >
-                Logout
-              </button>
             </div>
           ) : (
             <div className=" flex md:space-x-2 lg:space-x-2">

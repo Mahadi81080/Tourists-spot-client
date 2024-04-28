@@ -6,14 +6,13 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { AuthContext } from "../../Providers/AuthProviders";
 
- 
-
 const Login = () => {
-    const [showPassword, setShowPassword] = useState(false);
-  const location = useLocation()
-  console.log('Location in the login page',location);
-  const navigate =useNavigate()
-  const { singIn, googleLogin, githubLogin,facebookLogin } = useContext(AuthContext);
+  const [showPassword, setShowPassword] = useState(false);
+  const location = useLocation();
+  console.log("Location in the login page", location);
+  const navigate = useNavigate();
+  const { singIn, googleLogin, githubLogin, facebookLogin } =
+    useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -25,7 +24,7 @@ const Login = () => {
       .then((result) => {
         console.log(result);
         toast.success("Login Successfully");
-        navigate(location?.state? location.state:'/')
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.error("Sign-in error:", error);
@@ -34,8 +33,14 @@ const Login = () => {
   };
   return (
     <div>
-      <Helmet><title>Login_page</title></Helmet>
-      <div data-aos="zoom-in" data-aos-duration='1000' className="flex justify-center px-5">
+      <Helmet>
+        <title>Login_page</title>
+      </Helmet>
+      <div
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        className="flex justify-center px-5"
+      >
         <div className="w-full max-w-md p-8 space-y-3 rounded-xl shadow-xl my-3 dark:bg-gray-50 dark:text-gray-800">
           <h1 className="text-2xl font-bold text-center">Login</h1>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -99,7 +104,7 @@ const Login = () => {
           </div>
           <div className="flex justify-center space-x-4">
             <button
-              onClick={()=>googleLogin()}
+              onClick={() => googleLogin()}
               aria-label="Log in with Google"
               className="p-3 rounded-sm"
             >
@@ -112,8 +117,10 @@ const Login = () => {
               </svg>
             </button>
             <button
-             onClick={()=>facebookLogin()}
-              aria-label="Log in with Facebook" className="p-3 rounded-sm">
+              onClick={() => facebookLogin()}
+              aria-label="Log in with Facebook"
+              className="p-3 rounded-sm"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -126,7 +133,7 @@ const Login = () => {
               </svg>
             </button>
             <button
-               onClick={()=>githubLogin()}
+              onClick={() => githubLogin()}
               aria-label="Log in with GitHub"
               className="p-3 rounded-sm"
             >
@@ -151,8 +158,6 @@ const Login = () => {
           </p>
         </div>
       </div>
-       
-    
     </div>
   );
 };

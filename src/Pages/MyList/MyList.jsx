@@ -28,7 +28,7 @@ const MyList = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/addSpot/${_id}`, {
+        fetch(`https://tourists-spot-server.vercel.app/addSpot/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -52,7 +52,7 @@ const MyList = () => {
       <Helmet>
         <title>My_List</title>
       </Helmet>
-      <div className="my-5 mx-10 min-h-screen">
+      <div className="my-5 mx-10 min-h-screen bg-gray-800 dark:bg-gray-100 text-gray-100 dark:text-gray-800 p-7 rounded-md">
         <h2 className="text-center my-8 md:texl-2xl lg:text-3xl text-black font-semibold ">
           Your Added Tourists Spot Data
         </h2>
@@ -76,8 +76,12 @@ const MyList = () => {
             <tbody>
               {/* row 1 */}
               {lists.map((list) => (
-                <tr key={list._id} className="hover" data-aos="fade-right"
-                data-aos-duration="1500">
+                <tr
+                  key={list._id}
+                  className="hover"
+                  data-aos="fade-right"
+                  data-aos-duration="1500"
+                >
                   <th>
                     <label>
                       <input type="checkbox" className="checkbox" />
@@ -129,7 +133,7 @@ const MyList = () => {
             </tbody>
             {/* foot */}
             <tfoot>
-              <tr >
+              <tr>
                 <th>
                   <label>
                     <input type="checkbox" className="checkbox" />

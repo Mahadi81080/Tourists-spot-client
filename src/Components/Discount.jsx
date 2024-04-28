@@ -1,8 +1,10 @@
 const Discount = () => {
   return (
     <div>
-        <h2 className="text-center text-3xl my-10 text-[#ed5b31]">Website Information</h2>
-      <div className="stats w-full py-10 shadow-sm bg-[#f3f4f6]">
+      <h2 className="text-center text-3xl my-10 text-[#ed5b31]">
+        Website Information
+      </h2>
+      <div className="flex flex-col lg:flex-row stats w-full py-10 shadow-sm bg-[#f3f4f6]">
         <div className="stat">
           <div className="stat-figure text-secondary">
             <svg
@@ -23,7 +25,6 @@ const Discount = () => {
           <div className="stat-value text-secondary">2.6k</div>
           <div className="stat-desc">21% more than last month</div>
         </div>
-
         <div className="stat">
           <div className="stat-figure text-secondary">
             <svg
@@ -44,7 +45,6 @@ const Discount = () => {
           <div className="stat-value">1200</div>
           <div className="stat-desc">↗︎ 120 (11%)</div>
         </div>
-
         <div className="stat">
           <div className="stat-figure text-secondary">
             <svg

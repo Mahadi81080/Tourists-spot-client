@@ -9,7 +9,7 @@ const Countries = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/countries");
+        const response = await fetch("https://tourists-spot-server.vercel.app/countries");
         const data = await response.json();
         setLoadedCountries(data);
       } catch (error) {
@@ -22,7 +22,7 @@ const Countries = () => {
   }, []);
   return (
     <div>
-      <div className="mx-10 my-5">
+      <div className=" my-5">
         <div className="max-w-xl mx-auto my-10 text-center">
           <span className="font-bold tracking-wider uppercase text-[#ed5b31] text-2xl">
              Countries  Fetures

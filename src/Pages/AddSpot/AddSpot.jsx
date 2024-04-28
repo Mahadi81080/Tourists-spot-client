@@ -12,7 +12,7 @@ const AddSpot = () => {
   const onSubmit = (data) => {
     console.log(data);
     // Send data to the server
-    fetch("http://localhost:5000/addSpot", {
+    fetch("https://tourists-spot-server.vercel.app/addSpot", {
       method: "POST",
       headers: {
         "content-type": "application/json",
